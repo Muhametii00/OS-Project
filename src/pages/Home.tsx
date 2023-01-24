@@ -1,4 +1,5 @@
 import { Icon } from "@components/shared/Icon/Icon";
+import { browserModal } from "@components/shared/Modal";
 
 interface Props {
   onLogOut: () => void;
@@ -16,7 +17,10 @@ const Home = (props: Props) => {
         </div>
       </div>
       <div className="flex flex-row justify-start items-center mt-6 ml-6 mb-80">
-        <button className="mr-5 flex flex-col items-center justify-center">
+        <button
+          onClick={browserModal}
+          className="mr-5 flex flex-col items-center justify-center"
+        >
           <div className="flex items-center justify-center mb-1 w-20 h-20 rounded-full bg-grey">
             <Icon className="w-7 " icon="camera" />
           </div>
